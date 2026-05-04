@@ -24,14 +24,13 @@ console.log(slidesClass);
   });
   const dots = document.querySelectorAll(".dot");
 
-  // 2. Clone first and last slides for infinite effect
   const firstClone = slides[0].cloneNode(true);
   const lastClone = slides[slides.length - 1].cloneNode(true);
   
   slider.appendChild(firstClone);
   slider.prepend(lastClone);
 
-  // 3. Initial Position
+
   slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 
   let isMoving = false;
